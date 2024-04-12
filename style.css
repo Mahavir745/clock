@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  position: relative;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.clock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid;
+  box-shadow: 0px 0px 27px white;
+
+  & span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 13em;
+    text-align: center;
+
+    & b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 30px;
+    }
+  }
+ 
+}
+
+.clock::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+}
+.hand{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hand {
+
+  & i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--hi);
+    border-radius: 8px;
+  }
+}
