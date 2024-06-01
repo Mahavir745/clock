@@ -26,7 +26,7 @@ body{
   & span{
     position: absolute;
     transform: rotate(calc(30deg*var(--i)));
-    inset: 15em;
+    inset: 11em;
     text-align: center;
 
     & b{
